@@ -1,1 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johan Garrido Riveros - CV Profesional</title>
+    
+    <!-- Meta tags para evitar indexación por buscadores -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="slurp" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="duckduckbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="baiduspider" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="yandexbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="facebookexternalhit" content="noindex, nofollow">
+    <meta name="twitterbot" content="noindex, nofollow">
+    <meta name="linkedinbot" content="noindex, nofollow">
+    
+    <!-- Evitar caché y archivo -->
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Segoe UI', sans-serif; line-height: 1.6; color: #2c3e50; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 210mm; margin: 0 auto; background: white; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border-radius: 16px; overflow: hidden; }
+        .btn-download { position: fixed; top: 30px; right: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 12px 24px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 14px; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3); transition: all 0.3s ease; z-index: 1000; }
+        .btn-download:hover { transform: translateY(-2px); box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4); }
+        .header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 40px 30px; text-align: center; position: relative; overflow: hidden; }
+        .header::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px); background-size: 40px 40px; animation: float 25s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-15px) rotate(180deg); } }
+        .header-content { position: relative; z-index: 1; }
+        .name { font-size: 2.8em; font-weight: 800; margin-bottom: 15px; text-shadow: 2px 2px 8px rgba(0,0,0,0.2); letter-spacing: 2px; }
+        .title { font-size: 1.5em; font-weight: 400; margin-top: 25px; opacity: 0.95; letter-spacing: 1.5px; background: rgba(255,255,255,0.9); color: #2c3e50; padding: 10px 25px; border-radius: 25px; display: inline-block; }
+        .contact-info { display: flex; justify-content: center; gap: 35px; margin: 30px 0; flex-wrap: wrap; }
+        .contact-info span { font-size: 1.1em; display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.15); padding: 8px 16px; border-radius: 20px; backdrop-filter: blur(10px); }
+        .profile-section { padding: 30px 40px; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-bottom: 1px solid #e9ecef; }
+        .profile-text { font-size: 1.1em; margin-bottom: 30px; text-align: justify; color: #495057; line-height: 1.7; }
+        .highlight-box { background: linear-gradient(135deg, #e8f4fd 0%, #f0f7ff 100%); padding: 30px; border-radius: 15px; margin: 30px 0; border-left: 5px solid #2196F3; box-shadow: 0 8px 25px rgba(33, 150, 243, 0.1); position: relative; overflow: hidden; }
+        .highlight-box::before { content: ''; position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: radial-gradient(circle, rgba(33, 150, 243, 0.1) 0%, transparent 70%); border-radius: 50%; }
+        .highlight-title { font-weight: 700; font-size: 1.3em; color: #1976D2; margin-bottom: 15px; position: relative; z-index: 1; }
+        .main-content { display: grid; grid-template-columns: 1.2fr 2.8fr; gap: 0; min-height: 600px; }
+        .sidebar { background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px 25px; border-right: 2px solid #dee2e6; }
+        .content { padding: 30px 35px; }
+        .section { margin-bottom: 25px; }
+        .section-title { font-size: 1.3em; font-weight: 800; color: #2c3e50; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 4px solid #3498db; text-transform: uppercase; letter-spacing: 1.2px; position: relative; }
+        .section-title::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 60px; height: 4px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .skills-grid { display: grid; gap: 25px; }
+        .skill-category { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); border: 1px solid #e9ecef; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .skill-category:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+        .skill-category h4 { color: #2c3e50; margin-bottom: 15px; font-size: 1.2em; font-weight: 700; }
+        .skill-list { list-style: none; display: grid; gap: 8px; }
+        .skill-list li { padding: 8px 12px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 6px; font-weight: 500; color: #495057; border-left: 3px solid #3498db; transition: all 0.3s ease; }
+        .skill-list li:hover { background: linear-gradient(135deg, #e3f2fd 0%, #f0f7ff 100%); transform: translateX(5px); }
+        .job { margin-bottom: 35px; padding: 25px; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); border-radius: 12px; border: 1px solid #e9ecef; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .job:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 15px; }
+        .job-title { font-size: 1.3em; font-weight: 700; color: #2c3e50; margin-bottom: 5px; }
+        .company { font-size: 1.1em; color: #3498db; font-weight: 600; }
+        .job-period { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.9em; white-space: nowrap; }
+        .job-description { color: #495057; line-height: 1.7; }
+        .companies-list { list-style: none; margin: 15px 0; }
+        .companies-list li { padding: 10px 0; border-bottom: 1px solid #f1f3f4; position: relative; padding-left: 20px; }
+        .companies-list li::before { content: '▶'; position: absolute; left: 0; color: #3498db; font-weight: bold; }
+        .company-name { font-weight: 700; color: #2c3e50; }
+        .education-item { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-left: 4px solid #e74c3c; box-shadow: 0 3px 10px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .education-item:hover { transform: translateX(5px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+        .education-title { font-weight: 700; color: #2c3e50; font-size: 1.1em; margin-bottom: 5px; }
+        .education-institution { color: #e74c3c; font-weight: 600; margin-bottom: 5px; }
+        .education-note { color: #7f8c8d; font-style: italic; font-size: 0.9em; }
+        .strengths-list { list-style: none; display: grid; gap: 15px; }
+        .strengths-list li { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-left: 4px solid #f39c12; transition: all 0.3s ease; }
+        .strengths-list li:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .strength-title { font-weight: 700; color: #2c3e50; margin-bottom: 8px; font-size: 1.1em; }
+        @media (max-width: 768px) { body { padding: 10px; } .container { border-radius: 8px; } .header { padding: 40px 30px; } .name { font-size: 2.5em; letter-spacing: 2px; } .title { font-size: 1.2em; padding: 8px 20px; } .contact-info { flex-direction: column; gap: 15px; align-items: center; } .profile-section { padding: 40px 30px; } .main-content { grid-template-columns: 1fr; gap: 0; } .sidebar { border-right: none; border-bottom: 2px solid #dee2e6; padding: 40px 30px; } .content { padding: 40px 30px; } .job-header { flex-direction: column; gap: 10px; } .job-period { align-self: flex-start; } }
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                box-sizing: border-box !important;
+            }
+            
+            body {
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+                font-size: 9pt !important;
+                line-height: 1.2 !important;
+                color: #2c3e50 !important;
+            }
+            
+            .btn-download { display: none !important; }
+            
+            .container {
+                max-width: none !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+            }
+            
+            /* HEADER SECTION */
+            .header {
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+                color: white !important;
+                padding: 12pt !important;
+                margin: 0 !important;
+                text-align: center !important;
+            }
+            
+            .header::before { display: none !important; }
+            
+            .name {
+                font-size: 16pt !important;
+                font-weight: 800 !important;
+                margin: 0 0 6pt 0 !important;
+                color: white !important;
+                text-shadow: none !important;
+                letter-spacing: 0.8pt !important;
+            }
+            
+            .title {
+                font-size: 10pt !important;
+                background: rgba(255,255,255,0.9) !important;
+                color: #2c3e50 !important;
+                padding: 4pt 8pt !important;
+                border-radius: 8pt !important;
+                margin: 6pt auto 8pt auto !important;
+                display: inline-block !important;
+                font-weight: 600 !important;
+            }
+            
+            .contact-info {
+                margin: 0 !important;
+                gap: 15pt !important;
+                justify-content: center !important;
+            }
+            
+            .contact-info span {
+                background: rgba(255,255,255,0.15) !important;
+                color: white !important;
+                padding: 3pt 6pt !important;
+                border-radius: 6pt !important;
+                font-size: 8pt !important;
+                font-weight: 500 !important;
+            }
+            
+            /* PROFILE SECTION */
+            .profile-section {
+                background: #f8f9fa !important;
+                padding: 10pt !important;
+                margin: 0 !important;
+                border-bottom: 1pt solid #dee2e6 !important;
+            }
+            
+            .profile-text {
+                font-size: 8pt !important;
+                line-height: 1.3 !important;
+                margin: 0 0 6pt 0 !important;
+                text-align: justify !important;
+            }
+            
+            .highlight-box {
+                background: #f0f7ff !important;
+                border-left: 2pt solid #2196F3 !important;
+                padding: 6pt !important;
+                margin: 6pt 0 0 0 !important;
+                box-shadow: none !important;
+            }
+            
+            .highlight-title {
+                font-size: 8pt !important;
+                font-weight: 700 !important;
+                color: #1976D2 !important;
+                margin: 0 0 3pt 0 !important;
+            }
+            
+            /* MAIN CONTENT GRID */
+            .main-content {
+                display: grid !important;
+                grid-template-columns: 1fr 2fr !important;
+                gap: 0 !important;
+                margin: 0 !important;
+                min-height: auto !important;
+            }
+            
+            /* SIDEBAR */
+            .sidebar {
+                background: #f8f9fa !important;
+                padding: 8pt !important;
+                border-right: 1pt solid #dee2e6 !important;
+                margin: 0 !important;
+            }
+            
+            /* MAIN CONTENT */
+            .content {
+                padding: 8pt !important;
+                margin: 0 !important;
+            }
+            
+            /* SECTIONS */
+            .section {
+                margin: 0 0 8pt 0 !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .section-title {
+                font-size: 9pt !important;
+                font-weight: 800 !important;
+                color: #2c3e50 !important;
+                margin: 0 0 4pt 0 !important;
+                padding-bottom: 2pt !important;
+                border-bottom: 1pt solid #3498db !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.5pt !important;
+            }
+            
+            /* JOBS */
+            .job {
+                background: white !important;
+                border: 0.5pt solid #e9ecef !important;
+                border-radius: 3pt !important;
+                padding: 5pt !important;
+                margin: 0 0 4pt 0 !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .job-header {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                margin-bottom: 2pt !important;
+            }
+            
+            .job-title {
+                font-size: 8pt !important;
+                font-weight: 700 !important;
+                color: #2c3e50 !important;
+                margin: 0 !important;
+            }
+            
+            .company {
+                font-size: 7pt !important;
+                color: #667eea !important;
+                font-weight: 600 !important;
+                margin: 0 !important;
+            }
+            
+            .job-period {
+                background: #667eea !important;
+                color: white !important;
+                padding: 1pt 4pt !important;
+                border-radius: 4pt !important;
+                font-size: 6pt !important;
+                font-weight: 600 !important;
+                white-space: nowrap !important;
+            }
+            
+            .job-description {
+                font-size: 7pt !important;
+                line-height: 1.2 !important;
+                color: #495057 !important;
+                margin: 2pt 0 0 0 !important;
+                text-align: justify !important;
+            }
+            
+            /* SKILLS */
+            .skill-category {
+                background: white !important;
+                border: 0.5pt solid #e9ecef !important;
+                border-radius: 3pt !important;
+                padding: 4pt !important;
+                margin: 0 0 3pt 0 !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .skill-category h4 {
+                font-size: 7pt !important;
+                font-weight: 700 !important;
+                color: #2c3e50 !important;
+                margin: 0 0 3pt 0 !important;
+            }
+            
+            .skill-list {
+                margin: 0 !important;
+                padding: 0 !important;
+                list-style: none !important;
+            }
+            
+            .skill-list li {
+                background: #f8f9fa !important;
+                border-left: 1.5pt solid #3498db !important;
+                padding: 1pt 3pt !important;
+                margin: 0 0 1pt 0 !important;
+                font-size: 6pt !important;
+                color: #2c3e50 !important;
+            }
+            
+            /* EDUCATION */
+            .education-item {
+                background: white !important;
+                border-left: 1.5pt solid #e74c3c !important;
+                padding: 3pt !important;
+                margin: 0 0 2pt 0 !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .education-title {
+                font-size: 7pt !important;
+                font-weight: 700 !important;
+                color: #2c3e50 !important;
+                margin: 0 0 1pt 0 !important;
+            }
+            
+            .education-institution {
+                font-size: 6pt !important;
+                color: #e74c3c !important;
+                font-weight: 600 !important;
+                margin: 0 0 1pt 0 !important;
+            }
+            
+            .education-note {
+                font-size: 6pt !important;
+                color: #7f8c8d !important;
+                font-style: italic !important;
+                margin: 0 !important;
+            }
+            
+            /* STRENGTHS */
+            .strengths-list {
+                margin: 0 !important;
+                padding: 0 !important;
+                list-style: none !important;
+            }
+            
+            .strengths-list li {
+                background: white !important;
+                border-left: 1.5pt solid #f39c12 !important;
+                padding: 3pt !important;
+                margin: 0 0 2pt 0 !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .strength-title {
+                font-size: 7pt !important;
+                font-weight: 700 !important;
+                color: #2c3e50 !important;
+                margin: 0 0 1pt 0 !important;
+            }
+            
+            /* COMPANIES LIST */
+            .companies-list {
+                margin: 0 !important;
+                padding: 0 !important;
+                list-style: none !important;
+            }
+            
+            .companies-list li {
+                padding: 2pt 0 2pt 8pt !important;
+                border-bottom: 0.5pt solid #f1f3f4 !important;
+                font-size: 6pt !important;
+                margin: 0 !important;
+                position: relative !important;
+            }
+            
+            .companies-list li::before {
+                content: '▶' !important;
+                position: absolute !important;
+                left: 0 !important;
+                color: #3498db !important;
+                font-size: 5pt !important;
+            }
+            
+            /* PAGE SETTINGS */
+            @page {
+                size: A4 !important;
+                margin: 0.7cm !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-download" onclick="downloadPDF()">📄 Descargar PDF</button>
+    
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="name">JOHAN GARRIDO RIVEROS</h1>
+                <div class="contact-info">
+                    <span>📍 San Javier, Chile</span>
+                    <span>📞 +56 956494376</span>
+                    <span>✉️ jhngarrido@gmail.com</span>
+                </div>
+                <div class="title">Full Stack Developer & Cybersecurity Specialist</div>
+            </div>
+        </header>
+
+        <section class="profile-section">
+            <h2 class="section-title">PERFIL PROFESIONAL</h2>
+            <p class="profile-text">
+                Profesional con amplia experiencia en <strong>ethical hacking ofensivo</strong> y <strong>desarrollo Full Stack</strong>, especializado en fortalecer la seguridad cibernética y crear soluciones web robustas y escalables. Mi enfoque técnico ha sido esencial para identificar, explotar y mitigar vulnerabilidades, garantizando la robustez de aplicaciones web y servicios ante ataques maliciosos.
+            </p>
+            
+            <div class="highlight-box">
+                <div class="highlight-title">Especialización en Integración de IA</div>
+                <p>Dominio avanzado en la integración de inteligencia artificial con sistemas web, especialmente con modelos de lenguaje (LLM), permitiendo automatizar procesos complejos, generar contenido inteligente y optimizar la experiencia del usuario final.</p>
+            </div>
+            
+            <p class="profile-text">
+                Como <strong>desarrollador Full Stack</strong>, poseo experiencia en PHP, MySQL, PostgreSQL, JavaScript, CSS y Tailwind CSS. Desarrollo proyectos completos en entornos web, con sólida comprensión en diseño, desarrollo y administración de bases de datos. Mi visión combina habilidades técnicas con enfoque estratégico, entregando soluciones robustas, de rápida implementación y alineadas con los objetivos de cada proyecto.
+            </p>
+        </section>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <section class="section">
+                    <h2 class="section-title">COMPETENCIAS TÉCNICAS</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Desarrollo Web</h4>
+                            <ul class="skill-list">
+                                <li>PHP</li>
+                                <li>JavaScript</li>
+                                <li>HTML5 & CSS3</li>
+                                <li>Tailwind CSS</li>
+                                <li>MySQL</li>
+                                <li>PostgreSQL</li>
+                                <li>APIs REST</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Seguridad Informática</h4>
+                            <ul class="skill-list">
+                                <li>Metasploit</li>
+                                <li>Burp Suite</li>
+                                <li>SQLmap</li>
+                                <li>Nmap</li>
+                                <li>Acunetix</li>
+                                <li>OWASP ZAP</li>
+                                <li>Kali Linux</li>
+                                <li>Wireshark</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Automatización & IA</h4>
+                            <ul class="skill-list">
+                                <li>Make (Integromat)</li>
+                                <li>Modelos LLM</li>
+                                <li>APIs de IA</li>
+                                <li>Automatización SMS/Email</li>
+                                <li>Flujos inteligentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+
+            </aside>
+
+            <main class="content">
+                <section class="section">
+                    <h2 class="section-title">EXPERIENCIA PROFESIONAL</h2>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Desarrollador Full Stack & Analista en Seguridad</div>
+                                <div class="company">Consultor Independiente | Santiago, Chile</div>
+                            </div>
+                            <div class="job-period">Agosto 2009 - Presente</div>
+                        </div>
+                        
+                        <div class="job-description">
+                            <div class="highlight-box">
+                                <div class="highlight-title">Desarrollo Full Stack:</div>
+                                <ul class="companies-list">
+                                    <li>Desarrollo de aplicaciones web completas con <strong>PHP, MySQL, PostgreSQL, JavaScript y Tailwind CSS</strong></li>
+                                    <li>Implementación de <strong>APIs REST</strong> para interoperabilidad entre servicios</li>
+                                    <li>Integración avanzada de <strong>IA y modelos de lenguaje (LLM)</strong> en sistemas web</li>
+                                    <li>Desarrollo de soluciones de <strong>comunicación automatizada</strong> (SMS, email)</li>
+                                    <li><strong>Automatización de procesos</strong> con Make, creando flujos inteligentes</li>
+                                    <li>Administración y optimización de bases de datos MySQL</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="highlight-box">
+                                <div class="highlight-title">Seguridad Informática - Clientes Destacados:</div>
+                                <ul class="companies-list">
+                                    <li><span class="company-name">Endesa Chile:</span> Auditoría de seguridad en aplicativos web e intranet, pruebas de penetración y análisis de vulnerabilidades</li>
+                                    <li><span class="company-name">100% Fútbol:</span> Evaluación de seguridad en plataformas de e-commerce, protección de datos sensibles</li>
+                                    <li><span class="company-name">Radio Agricultura:</span> Auditoría de seguridad en aplicativos web con informes técnicos exhaustivos</li>
+                                    <li><span class="company-name">Geret & HVR:</span> Evaluación de seguridad en sistemas intranet con análisis de riesgos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Analista de Seguridad</div>
+                                <div class="company">MG Solutions | Santiago, Chile</div>
+                            </div>
+                            <div class="job-period">Octubre 2019 - Julio 2024</div>
+                        </div>
+                        
+                        <div class="job-description">
+                            <ul class="companies-list">
+                                <li><strong>Detección de Vulnerabilidades:</strong> Auditorías de seguridad y pruebas de penetración en aplicativos y sistemas web</li>
+                                <li><strong>Elaboración de Informes:</strong> Documentación exhaustiva mediante informes técnicos detallados</li>
+                                <li><strong>Colaboración en Mitigación:</strong> Trabajo conjunto con equipos de desarrollo para implementar medidas correctivas</li>
+                                <li><strong>Capacitación:</strong> Relatorías en empresas clientes, impartiendo capacitaciones teóricas y prácticas</li>
+                                <li><strong>Pruebas Externas:</strong> Simulación de ataques reales en aplicaciones y redes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">EDUCACIÓN</h2>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Analista Programador</div>
+                        <div class="education-institution">Centro de Formación Técnica CENCO</div>
+                        <div class="education-note">Graduado con distinción máxima</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Perito Judicial</div>
+                        <div class="education-institution">IP de Chile</div>
+                        <div class="education-note">Mención Informática Forense</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Diplomado de Técnico en Integridad Web</div>
+                        <div class="education-institution">Dirección General de Televisión Educativa</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Curso Avanzado en Prevención del Cibercrimen</div>
+                        <div class="education-institution">Instituto Superior de Seguridad Pública</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Diplomado en Fundamentos Informáticos en Operaciones de Redes</div>
+                        <div class="education-institution">Centro de Formación Técnica CENCO</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Diplomado en Desarrollo Web</div>
+                        <div class="education-institution">Centro de Formación Técnica CENCO</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Ciberseguridad en Entornos de Aprendizajes Digitales</div>
+                        <div class="education-institution">Servicio Nacional de Capacitación y Empleo</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Introduction to Cybersecurity</div>
+                        <div class="education-institution">CISCO</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Curso Ethical Hacker</div>
+                        <div class="education-institution">CISCO</div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">FORTALEZAS CLAVE</h2>
+                    <ul class="strengths-list">
+                        <li>
+                            <div class="strength-title">Visión Integral</div>
+                            Combinación única de desarrollo y seguridad
+                        </li>
+                        <li>
+                            <div class="strength-title">Enfoque Estratégico</div>
+                            Soluciones alineadas con objetivos de negocio
+                        </li>
+                        <li>
+                            <div class="strength-title">Implementación Rápida</div>
+                            Entrega de soluciones robustas y eficientes
+                        </li>
+                        <li>
+                            <div class="strength-title">Comunicación Técnica</div>
+                            Explicación clara de conceptos complejos
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            const btn = document.querySelector('.btn-download');
+            btn.style.display = 'none';
+            window.print();
+            setTimeout(() => {
+                btn.style.display = 'block';
+            }, 1000);
+        }
+
+        window.addEventListener('beforeprint', function() {
+            document.body.style.background = 'white';
+        });
+
+        window.addEventListener('afterprint', function() {
+            document.body.style.background = 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)';
+        });
+    </script>
+</body>
+</html>
 
